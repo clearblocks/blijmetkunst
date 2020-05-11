@@ -1,0 +1,39 @@
+.blijmetkunst-figurine-block .blijmetkunst-figurine-image-button {
+    width: 400px;
+    background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blijmetkunst-figurine-block .blijmetkunst-figurine-image-button span {
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+    color: #007cba;
+    font-family: "Noto Sans KR" !important;
+}
+
+.blijmetkunst-figurine-block .blijmetkunst-figurine-color-image-button {
+    width: 150px;
+    height: 200px;
+    background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.blijmetkunst-figurine-block .blijmetkunst-figurine-color-image-button span {
+    height: auto;
+    text-align: center;
+    font-family: "Noto Sans KR" !important;
+    font-size: 18px;
+    color: #007cba;
+    position: relative;
+}
+
+.blijmetkunst-figurine-block textarea {
+    font-family: "Noto Sans KR" !important;
+}

@@ -1,0 +1,778 @@
+/*
+Theme Name: Blij met kunst
+Author: Theo van Oostruma
+Template: twentynineteen
+Version: 1.2
+*/
+
+html, body {
+    height: 100%;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+#blij-met-kunst * {
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    color: #515151;
+}
+
+.fa, .fas, .far {
+    font-family: "Font Awesome 5 Pro" !important;
+}
+
+@media only screen and (min-device-width: 767px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (max-device-width: 766px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+#blij-met-kunst #page {
+    min-height: 100%;
+    position: relative;
+}
+
+#blij-met-kunst #content {
+    padding-bottom: 5em;
+}
+
+#blij-met-kunst .tmp-hidden {
+    display: none;
+}
+
+/**
+ * Header
+ **/
+#blij-met-kunst #page {
+    padding-top: 6em;
+}
+
+#blij-met-kunst header {
+    height: 6em;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: linear-gradient(to top, rgb(183, 223, 248), rgb(217, 239, 241));
+    border-bottom: 1px solid #89a7ba;
+    /* background-color: #c9fffd; */
+}
+
+#blij-met-kunst .site-branding {
+    margin: 0;
+}
+
+#blij-met-kunst .site-branding > span {
+    display: block;
+}
+
+#blij-met-kunst .site-home-button {
+    display: none;
+}
+
+#blij-met-kunst #site-logo {
+    height: 4em;
+    top: 1em;
+    left: 0.5em;
+}
+
+#blij-met-kunst h1.site-title {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    text-align: center;
+    margin: auto 0;
+    margin-left: 1em;
+}
+
+#blij-met-kunst h1.site-title a {
+    font-size: 2em;
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst header {
+        height: 6em;
+    }
+
+    #blij-met-kunst .site-branding > span {
+        display: flex;
+        justify-content: center;
+    }
+
+    #blij-met-kunst .site-home-button {
+        display: inherit;
+        position: absolute;
+        top: 0.4em;
+        left: 2.2em;
+        font-size: 1.6em;
+    }
+
+    #blij-met-kunst #site-logo {
+        height: 5em;
+        top: 0.5em;
+    }
+
+    #blij-met-kunst h1.site-title {
+        display: block;
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        width: auto;
+    }
+}
+
+#blij-met-kunst h2 {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 1em;
+}
+
+#blij-met-kunst.home h2 {
+    display: none;
+}
+
+#blij-met-kunst h2:before {
+    content: none;
+    height: 0;
+    margin: 0;
+    width: 0;
+}
+
+#blij-met-kunst h3 {
+    font-size: 2em;
+    margin: 0.5em 1em;
+}
+
+/**
+ * Menu
+ */
+#blij-met-kunst #responsive-menu-button {
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    top: 1.4em;
+    right: 0.9em;
+    position: fixed;
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst #responsive-menu-button {
+        top: 0.3em;
+    }
+}
+
+#blij-met-kunst #responsive-menu-button .responsive-menu-box {
+    color: black;
+}
+
+#blij-met-kunst #responsive-menu-button .responsive-menu-inner {
+    background-color: #515151;
+    width: 1.5em;
+}
+
+#blij-met-kunst #responsive-menu-button .responsive-menu-inner::after,
+#blij-met-kunst #responsive-menu-button .responsive-menu-inner::before {
+    width: 1.5em;
+    background-color: #515151;
+}
+
+#blij-met-kunst #responsive-menu-container {
+    border-right: 1px solid #cccccc;
+    margin-top: 6em;
+}
+
+#blij-met-kunst #responsive-menu li.menu-item-home {
+    display: none;
+}
+
+#blij-met-kunst #responsive-menu li.menu-item-home > a {
+    background: linear-gradient(to top, rgb(183, 223, 248), rgb(217, 239, 241));
+    border: none !important;
+    border-bottom: 1px solid #89a7ba !important;
+    height: 3.4em !important;
+    padding-top: 10px;
+}
+
+#blij-met-kunst #responsive-menu li.menu-item > a {
+    font-size: 1em !important;
+}
+
+#blij-met-kunst #responsive-menu li.responsive-menu-current-item > a {
+    font-weight: 600;
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst #responsive-menu-container {
+        width: 20%;
+        min-width: 200px;
+    }
+
+    #blij-met-kunst #responsive-menu-button {
+        left: 0.9em;
+    }
+}
+
+/**
+ * Content
+ **/
+
+#blij-met-kunst ol {
+    margin: 0.5em 1.6em;
+    margin-top: 0;
+}
+
+#blij-met-kunst .entry-content {
+    width: inherit;
+    max-width: inherit;
+    margin: 0 2em;
+}
+
+#blij-met-kunst.home .entry-content {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#blij-met-kunst p {
+    margin: 0 16px;
+    margin-bottom: 1em;
+    margin-left: 0;
+}
+
+#blij-met-kunst.home p {
+    text-align: left;
+    margin-left: 2em;
+}
+
+#blij-met-kunst .entry-content > .wp-block-image {
+    margin: 1em 0;
+}
+
+#blij-met-kunst .entry-content > .wp-block-image img {
+    width: 100%;
+}
+
+@media only screen and (min-device-width: 767px) {
+
+    #blij-met-kunst.home p {
+        margin: 1em auto !important;
+    }
+
+    #blij-met-kunst p {
+        width: 80%;
+        padding: 16px 0;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    #blij-met-kunst h3 {
+        margin: 1em auto;
+        text-align: left;
+        font-size: 2em;
+    }
+
+    #blij-met-kunst ol {
+        margin: 1em auto;
+    }
+}
+
+/**
+ * Slider
+ **/
+#blij-met-kunst-main-slider {
+    margin: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+#blij-met-kunst-main-slider .flexslider {
+    margin-bottom: 1em;
+}
+
+#blij-met-kunst-main-slider .caption-wrap {
+    text-align: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    height: 70px;
+}
+
+#blij-met-kunst-main-slider .caption {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 0.8em;
+}
+
+#blij-met-kunst-main-slider .flex-control-paging {
+    bottom: 0;
+    margin: 0;
+}
+
+#blij-met-kunst-main-slider .flex-control-paging a {
+    background: rgba(255,255,255,0.4)
+}
+
+#blij-met-kunst-main-slider .flex-control-paging a.flex-active {
+    background: rgba(255,255,255,0.8)
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst-main-slider .flex-control-paging {
+        bottom: 1em;
+    }
+
+    #blij-met-kunst-main-slider .caption-wrap {
+        height: 130px;
+    }
+
+    #blij-met-kunst-main-slider .caption {
+        font-size: 2.5em;
+    }
+}
+
+/**
+ * Block Gallery
+ */
+
+.wp-block-gallery {
+    display: none;
+}
+
+@media only screen and (min-device-width: 767px) {
+    .wp-block-gallery {
+        display: block;
+        width: 80% !important;
+        max-width: 80% !important;
+        margin: 2em auto !important;
+    }
+
+    .wp-block-gallery ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wp-block-gallery li figure {
+        width: 85%;
+        height: 85%;
+    }
+}
+
+/**
+ * Wide Image
+ */
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst .wide-image {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    #blij-met-kunst .wide-image img {
+        width: 100%;
+    }
+}
+
+
+/**
+ * Buttons
+ **/
+#blij-met-kunst .wp-block-button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst .wp-block-button {
+        width: 250px;
+        margin-bottom: 2em;
+    }
+}
+
+#blij-met-kunst .wp-block-button__link,
+#booking_form1 button,
+#blij-met-kunst .wpcf7-submit {
+    display: block;
+    background: linear-gradient(to top, rgb(142, 208, 206), rgb(201, 255, 253));
+    /* background-color: #a4f1ee; */
+    color: #515151;
+    border: 2px solid #619b99;
+}
+
+/**
+ * Aanbod/Afspraken pagina/Contact
+ */
+
+#blij-met-kunst .post571 form {
+    margin-bottom: 0;
+}
+
+#blij-met-kunst .bmk-contact-info-container {
+    display: flex;
+    border: 1px solid #ccc;
+    height: 12em;
+    justify-content: start;
+    width: 110%;
+}
+
+#blij-met-kunst .bmk-contact-info {
+    display: block;
+    padding: 1em;
+    padding-right: 0;
+    margin: 0;
+    margin-bottom: 1em;
+    width: auto;
+}
+
+#blij-met-kunst .bmk-contact-info-container img {
+    height: 11em;
+    margin-top: 0.5em;
+    margin-left: 3em;
+}
+
+#blij-met-kunst .wpcf7-mail-sent-ok {
+    border: 2px solid #619b99;
+    marign: 0;
+}
+
+@media only screen and (min-device-width: 767px)  {
+
+    #blij-met-kunst .page h2 {
+        margin: 1em 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /*#blij-met-kunst .post-375 h2,*/
+    /*#blij-met-kunst .post-471 h2,*/
+    /*#blij-met-kunst .post-447 h2 {*/
+    /*    margin: 1em 0;*/
+    /*    width: 100%;*/
+    /*    text-align: center;*/
+    /*}*/
+
+    #blij-met-kunst .page h2.align-left {
+        margin: 1em auto;
+        width: 60%;
+        text-align: left;
+        padding-left: 60px;
+    }
+
+    /*#blij-met-kunst .post-571 h2 {*/
+    /*    margin: 1em auto;*/
+    /*    width: 60%;*/
+    /*    text-align: left;*/
+    /*    padding-left: 60px;*/
+    /*}*/
+
+    #blij-met-kunst .page .entry-content {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #blij-met-kunst .page .entry-content p {
+        margin-left: 0;
+    }
+
+    /*#blij-met-kunst .post-375 .entry-content,*/
+    /*#blij-met-kunst .post-571 .entry-content,*/
+    /*#blij-met-kunst .post-471 .entry-content,*/
+    /*#blij-met-kunst .post-447 .entry-content {*/
+    /*    width: 60%;*/
+    /*    margin: 0 auto;*/
+    /*}*/
+
+    /*#blij-met-kunst .post-375 .entry-content p,*/
+    /*#blij-met-kunst .post-571 .entry-content p,*/
+    /*#blij-met-kunst .post-471 .entry-content p,*/
+    /*#blij-met-kunst .post-447 .entry-content p {*/
+    /*    margin-left: 0;*/
+    /*}*/
+
+    #blij-met-kunst .entry-content .aanbod-block-image {
+        margin: 0 auto;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+}
+
+/**
+ * Statue Gallery
+ */
+#blij-met-kunst .statue-gallery {
+    display: flex;
+    width: 85%;
+    max-width: 85%;
+    float: none;
+    margin: 0;
+}
+
+#blij-met-kunst .statue-gallery li {
+    /* border was #cccccc */
+    border-top: 1px solid #89a7ba;
+    padding: 1em 2em 0 0;
+}
+
+#blij-met-kunst .statue-gallery figure {
+    display: flex;
+}
+
+#blij-met-kunst .statue-gallery figure img {
+    width: 50%;
+    border: 1px solid #89a7ba;
+}
+
+#blij-met-kunst .statue-gallery figure figcaption {
+    position: relative;
+    height: 100%;
+    background: none;
+    text-align: left;
+}
+
+#blij-met-kunst .statue-gallery figure figcaption .title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#blij-met-kunst .statue-gallery figure figcaption .price {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #89a7ba;
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst .statue-gallery {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 2em 0 !important;
+    }
+
+    #blij-met-kunst .statue-gallery figure img {
+        width: 40%;
+    }
+}
+
+/**
+ * Booking form
+ */
+#post-447 #remarks1 {
+    width: 100%;
+    height: 8em;
+}
+
+@media only screen and (min-device-width: 767px) {
+
+    #post-447 .entry-content p {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #post-447 .bk_calendar_frame {
+        width: 70% !important;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #post-447 .bk_calendar_frame .datepick-days-row {
+        height: 3em;
+    }
+
+    #post-447 .wpbc_structure_calendar .wpdev-help-message {
+        margin: 1em auto !important;
+        width: 60%;
+        display: block;
+    }
+
+    #post-447 .wpbc_structure_form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #post-447 .wpbc_structure_form input {
+        width: 100%;
+    }
+
+    #post-447 .wpbc_structure_form button {
+        width: 12em;
+    }
+}
+
+#booking_form1 .calendar-links {
+    background: linear-gradient(to top, rgb(142, 208, 206), rgb(201, 255, 253));
+}
+
+#booking_form1 a {
+    text-decoration: none;
+}
+
+#booking_form1 .calendar-links a {
+    color: transparent;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: none;
+}
+
+#booking_form1 .calendar-links .datepick-next a::before,
+#booking_form1 .calendar-links .datepick-prev a::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    color: #515151;
+}
+
+#booking_form1 .calendar-links .datepick-prev a::after {
+    content: "\f100";
+}
+
+#booking_form1 .calendar-links .datepick-next a::before {
+    content: "\f101";
+}
+
+#booking_form1 .datepick-current-day {
+    background-color: #a4f1ee;
+}
+
+#booking_form1 .datepick-current-day a {
+    text-shadow: none;
+}
+
+#booking_form1 .block_hints .block_time,
+#booking_form1 .datepick-inline .timespartly {
+    background-image: none;
+}
+
+#booking_form1 select {
+    width: 80px !important;
+}
+
+#booking_form1 .wpdev-help-message {
+    background-color: transparent;
+    border: none;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+#booking_form1 .alert.alert-warning {
+    color: red;
+}
+
+/**
+ * Contact Form
+ */
+#blij-met-kunst .wpcf7 {
+    margin-top: 0;
+}
+
+#blij-met-kunst .wpcf7 p {
+    display: none;
+}
+
+#blij-met-kunst .wpcf7 .bmk-contact-input {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+#blij-met-kunst .wpcf7 .bmk-contact-desc {
+    margin-bottom: 1em;
+}
+
+#blij-met-kunst .wpcf7 .bmk-contact-submit {
+    margin-top: 1em;
+}
+
+#blij-met-kunst .wpcf7-validation-errors,
+#blij-met-kunst .wpcf7-acceptance-missing {
+    border-color: #619b99;
+    margin: 1em 0;
+}
+
+#blij-met-kunst .wpcf7-not-valid-tip {
+    color: #f00 !important;
+}
+
+/**
+ * Image modal
+ */
+#image-modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 6em;
+}
+
+#image-modal .modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1em;
+}
+
+#image-modal.open {
+    display: block;
+}
+
+#image-modal .modal-close {
+    position: absolute;
+    top: 0.3em;
+    right: 0.5em;
+    color: white;
+    font-size: 2em;
+}
+
+@media only screen and (min-device-width: 767px) {
+    #image-modal .modal-body {
+        width: 60%;
+        margin: 0 auto;
+        padding: 1em;
+        text-align: center;
+    }
+}
+
+/**
+ * Footer
+ */
+#blij-met-kunst .site-footer {
+    margin-top: 2em;
+    padding: 0.5em;
+    background: linear-gradient(to top, rgb(183, 223, 248), rgb(217, 239, 241));
+    border-top: 2px solid #89a7ba;
+    height: 4em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#blij-met-kunst .site-footer .site-info {
+    margin: 0.5em;
+}
+
+#blij-met-kunst #menu-footer-menu {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#blij-met-kunst #menu-footer-menu li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+}

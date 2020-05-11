@@ -1,0 +1,36 @@
+.blijmetkunst-figurine {
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    color: #515151;
+    display: flex;
+    height: 400px;
+}
+
+.blijmetkunst-figurine .blijmetkunst-figurine-image {
+    height: 400px;
+    max-width: unset;
+}
+
+.blijmetkunst-figurine .blijmetkunst-figurine-color-image {
+    width: 150px;
+    max-width: unset;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.blijmetkunst-figurine-info {
+    margin-left: 1em;
+    position: relative;
+}
+
+.blijmetkunst-figurine-info .blijmetkunst-figurine-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.blijmetkunst-figurine-info .blijmetkunst-figurine-price {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #89a7ba;
+}
