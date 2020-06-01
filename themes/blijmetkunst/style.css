@@ -3,6 +3,25 @@ Theme Name: Blij met kunst
 Author: Theo van Oostruma
 Template: twentynineteen
 Version: 1.2
+
+Colors:
+
+Mint groen: #c9fffd - gradient: rgb(142, 208, 206), rgb(201, 255, 253)
+Mint groen border: #619b99
+Licht blauw: #b7dff8 - gradient: rgb(183, 223, 248), rgb(217, 233, 248)
+Licht blauw border: #89a7ba
+Tekst grijs: #515151
+
+Alt colors (not used):
+
+Mint groen: #c6ffd9
+Licht blauw: #b7dff8
+pastel geel: #fbedb4
+zalm: #fddcb6
+oranje: #ffca7f
+paars: #e1c3ff
+licht rood: #ffdddd
+
 */
 
 html, body {
@@ -48,6 +67,9 @@ body.no-scroll {
     display: none;
 }
 
+#blij-met-kunst p a {
+    color: #619b99;
+}
 /**
  * Header
  **/
@@ -228,6 +250,11 @@ body.no-scroll {
  * Content
  **/
 
+#blij-met-kunst .site-content {
+    /*width: 80%;*/
+    /*margin: 0 auto;*/
+}
+
 #blij-met-kunst ol {
     margin: 0.5em 1.6em;
     margin-top: 0;
@@ -265,6 +292,16 @@ body.no-scroll {
     width: 100%;
 }
 
+#blij-met-kunst .discount-block {
+    border: 2px solid #619b99;
+    border-radius: 4px;
+    background-color: rgba(201, 255, 253, 0.6);
+    padding: 5px;
+    text-align: center !important;
+    font-size: 24px;
+
+}
+
 @media only screen and (min-device-width: 767px) {
 
     #blij-met-kunst.home p {
@@ -272,9 +309,10 @@ body.no-scroll {
     }
 
     #blij-met-kunst p {
-        width: 80%;
+        width: 100%;
         padding: 16px 0;
         margin: 0 auto;
+        margin-right: 0 !important;
         padding-top: 0;
     }
 
@@ -365,7 +403,7 @@ body.no-scroll {
 
     .wp-block-gallery li figure {
         width: 85%;
-        height: 85%;
+        height: 85% !important;
     }
 }
 
@@ -716,11 +754,13 @@ body.no-scroll {
 
 #image-modal .modal-content {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 1em;
+}
+
+#image-modal .modal-body {
+    width: 80%;
+    padding-top: 3em;
+    margin: 0 auto;
 }
 
 #image-modal.open {
@@ -737,10 +777,14 @@ body.no-scroll {
 
 @media only screen and (min-device-width: 767px) {
     #image-modal .modal-body {
-        width: 60%;
-        margin: 0 auto;
-        padding: 1em;
+        height: 80%;
+        padding-top: 3em;
         text-align: center;
+    }
+
+    #image-modal .modal-body img {
+        height: 100%;
+        max-width: none;
     }
 }
 

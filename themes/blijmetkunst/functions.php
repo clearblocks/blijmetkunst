@@ -1,6 +1,7 @@
 <?php
 function enqueue_child_theme_styles() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_script('images-script', get_stylesheet_directory_uri() . '/js/images.js');
     wp_enqueue_script('theme-script', get_stylesheet_directory_uri() . '/js/blijmetkunst.js');
 }
 

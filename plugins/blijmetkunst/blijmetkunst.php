@@ -21,6 +21,14 @@ function blijmetkunst_figurine_block() {
         true // Load script in footer.
     );
 
+//    wp_register_script(
+//        'blijmetkunst-figurine-block-frontend-script',
+//        plugins_url('figurine/block-frontend.js', __FILE__),
+//        [],
+//        filemtime(plugin_dir_path(__FILE__) . 'figurine/block-frontend.js'),
+//        true // Load script in footer.
+//    );
+
     // Styles.
     wp_register_style(
         'blijmetkunst-figurine-block-editor-style',

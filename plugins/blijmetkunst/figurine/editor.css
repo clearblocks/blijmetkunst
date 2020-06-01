@@ -14,6 +14,10 @@
     font-family: "Noto Sans KR" !important;
 }
 
+.blijmetkunst-figurine-block .blijmetkunst-figurine-color-image {
+    bottom: 0em;
+}
+
 .blijmetkunst-figurine-block .blijmetkunst-figurine-color-image-button {
     width: 150px;
     height: 200px;
@@ -22,7 +26,7 @@
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: -0.5em;
 }
 
 .blijmetkunst-figurine-block .blijmetkunst-figurine-color-image-button span {
@@ -36,4 +40,13 @@
 
 .blijmetkunst-figurine-block textarea {
     font-family: "Noto Sans KR" !important;
+}
+
+.blijmetkunst-figurine-price-block {
+    display: flex;
+}
+
+.blijmetkunst-figurine-price-per-piece {
+    margin-left: 1em;
+    padding-top: 5px;
 }

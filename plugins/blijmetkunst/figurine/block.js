@@ -21,6 +21,9 @@
             price: {
                 type: 'string'
             },
+            pricePerPiece: {
+                type: 'string'
+            },
             greyPhotoId: {
                 type: 'number'
             },
@@ -88,16 +91,29 @@
                             props.setAttributes({size: newValue})
                         }
                     }),
-                    el(PlainText, {
-                        key: 'editable',
-                        tagName: 'div',
-                        className: 'blijmetkunst-figurine-price',
-                        placeholder: 'Prijs',
-                        value: attributes.price,
-                        onChange: function (newValue) {
-                            props.setAttributes({price: newValue})
-                        }
-                    }),
+                    el('div', {className: 'blijmetkunst-figurine-price-block'},
+                        [
+                            el(PlainText, {
+                                key: 'editable',
+                                tagName: 'div',
+                                className: 'blijmetkunst-figurine-price',
+                                placeholder: 'Prijs',
+                                value: attributes.price,
+                                onChange: function (newValue) {
+                                    props.setAttributes({price: newValue})
+                                }
+                            }),
+                            el(PlainText, {
+                                key: 'editable',
+                                tagName: 'div',
+                                className: 'blijmetkunst-figurine-price-per-piece',
+                                placeholder: 'Prijs per stuk',
+                                value: attributes.pricePerPiece,
+                                onChange: function (newValue) {
+                                    props.setAttributes({pricePerPiece: newValue})
+                                }
+                            })
+                        ]),
                     el(MediaUpload, {
                         onSelect: onSelectColorImage,
                         type: 'image',
@@ -116,15 +132,20 @@
             ])
         },
         save: function (props) {
-            var attributes = props.attributes
+            var attributes = props.attributes;
+
+            var pricePerPiece = (attributes.pricePerPiece && attributes.pricePerPiece.length > 0) ? '&euro; ' + attributes.pricePerPiece + ' per stuk' : '';
+            var size = 'Hoogte: ' + attributes.size + ' cm';
+            var price = '&euro; ' + attributes.price;
 
             var element = el('div', {className: 'blijmetkunst-figurine'}, [
-                el('img', {className: 'blijmetkunst-figurine-image', src: attributes.greyPhotoUrl}),
+                el('img', {className: 'blijmetkunst-figurine-image', src: attributes.greyPhotoUrl, "data-fig-img": "1"}),
                 el('div', {className: 'blijmetkunst-figurine-info'}, [
                     el('div', {className: 'blijmetkunst-figurine-title'}, attributes.title),
-                    el('div', {className: 'blijmetkunst-figurine-size'}, 'Hoogte: ' + attributes.size + ' cm'),
-                    el('div', {className: 'blijmetkunst-figurine-price'}, 'euro ' + attributes.price),
-                    el('img', {className: 'blijmetkunst-figurine-color-image', src: attributes.colorPhotoUrl})
+                    el('div', {className: 'blijmetkunst-figurine-size'}, size),
+                    el('div', {className: 'blijmetkunst-figurine-price'}, price),
+                    el('div', {className: 'blijmetkunst-figurine-price-per-piece'}, pricePerPiece),
+                    el('img', {className: 'blijmetkunst-figurine-color-image', src: attributes.colorPhotoUrl, "data-fig-img": "2"})
                 ])
             ])
 
@@ -133,8 +154,6 @@
             //     <div class="size">Hoogte: 14 cm</div>
             //     <div class="price">&euro; 17</div>
             // </div>
-
-            console.log("save", props, element);
 
             return (
                 element
