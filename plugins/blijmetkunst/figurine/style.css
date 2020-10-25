@@ -2,16 +2,25 @@
     font-family: Noto Sans KR;
     font-size: 18px;
     color: #515151;
-    display: flex;
-    height: 200px;
+    height: 250px;
     border-top: 1px solid #89a7ba;
     padding-top: 1em;
     max-width: 700px !important;
+    position: relative;
 }
 
 .blijmetkunst-figurine .blijmetkunst-figurine-image {
-    height: 200px;
+    width: 120px;
     max-width: unset;
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    margin-top: 10px !important;
+    z-index: 1;
+}
+
+.blijmetkunst-figurine .blijmetkunst-figurine-image.image-landscape {
+    width: 180px;
 }
 
 .blijmetkunst-figurine .blijmetkunst-figurine-color-image {
@@ -19,10 +28,15 @@
     max-width: unset;
     height: auto;
     position: absolute;
-    bottom: -1em;
+    margin-bottom: 0;
+
+    left: 120px;
+    margin-left: 1em;
+    bottom: 0;
 }
 
 .blijmetkunst-figurine-info {
+    height: 100%;
     margin-left: 1em;
     position: relative;
 }
@@ -38,9 +52,36 @@
 
 .blijmetkunst-figurine-info .blijmetkunst-figurine-price {
     font-weight: bold;
-    font-size: 1em !important;
+    font-size: 0.9em !important;
     color: #89a7ba !important;
 }
+
+.blijmetkunst-figurine-info .blijmetkunst-figurine-discount {
+    margin-left: 1em;
+    position: absolute;
+    top: 3px;
+    left: 120px;
+    display: flex;
+}
+
+.blijmetkunst-figurine-info .blijmetkunst-figurine-discount .blijmetkunst-figurine-orig-price {
+    text-decoration: line-through;
+    margin-right: 5px;
+    white-space: nowrap;
+    line-height: 1em;
+    margin-top: 1px;
+}
+
+.blijmetkunst-figurine-info .blijmetkunst-figurine-discount .blijmetkunst-figurine-discount-price {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em !important;
+    color: #89a7ba !important;
+
+    height: 185px;
+    line-height: 1em;
+}
+
 
 .blijmetkunst-figurine-info .blijmetkunst-figurine-price-per-piece {
     font-size: 0.7em !important;
@@ -49,14 +90,31 @@
 @media only screen and (min-device-width: 767px) {
     .blijmetkunst-figurine {
         height: 350px;
+        display: flex;
     }
 
     .blijmetkunst-figurine .blijmetkunst-figurine-image {
+        width: auto;
         height: 350px;
+        position: unset;
+        bottom: unset;
+        left: unset;
+        margin-top: 0 !important;
+    }
+
+    .blijmetkunst-figurine .blijmetkust-figurine-info {
+        height: auto;
     }
 
     .blijmetkunst-figurine .blijmetkunst-figurine-color-image {
         width: 150px;
+        left: unset;
+        margin-left: 0;
+        bottom: -1em;
+    }
+
+    .blijmetkunst-figurine .blijmetkunst-figurine-image.image-landscape {
+        width: auto;
     }
 
     .blijmetkunst-figurine-info .blijmetkunst-figurine-title {
@@ -67,8 +125,16 @@
         font-size: 1em !important;
     }
 
+    .blijmetkunst-figurine-info .blijmetkunst-figurine-discount {
+        margin-left: 0;
+        position: unset;
+        top: unset;
+        left: unset;
+        display: block;
+    }
+
     .blijmetkunst-figurine-info .blijmetkunst-figurine-price,
     .blijmetkunst-figurine-info .blijmetkunst-figurine-price-per-piece {
-        font-size: 1.3em !important;
+        font-size: 1em !important;
     }
 }

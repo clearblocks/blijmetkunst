@@ -292,14 +292,15 @@ body.no-scroll {
     width: 100%;
 }
 
-#blij-met-kunst .discount-block {
+#blij-met-kunst p.discount-block {
+    margin: 1em auto !important;
+    width: 80%;
     border: 2px solid #619b99;
     border-radius: 4px;
     background-color: rgba(201, 255, 253, 0.6);
     padding: 5px;
     text-align: center !important;
-    font-size: 24px;
-
+    font-size: 34px;
 }
 
 @media only screen and (min-device-width: 767px) {
@@ -491,14 +492,6 @@ body.no-scroll {
         text-align: center;
     }
 
-    /*#blij-met-kunst .post-375 h2,*/
-    /*#blij-met-kunst .post-471 h2,*/
-    /*#blij-met-kunst .post-447 h2 {*/
-    /*    margin: 1em 0;*/
-    /*    width: 100%;*/
-    /*    text-align: center;*/
-    /*}*/
-
     #blij-met-kunst .page h2.align-left {
         margin: 1em auto;
         width: 60%;
@@ -506,36 +499,14 @@ body.no-scroll {
         padding-left: 60px;
     }
 
-    /*#blij-met-kunst .post-571 h2 {*/
-    /*    margin: 1em auto;*/
-    /*    width: 60%;*/
-    /*    text-align: left;*/
-    /*    padding-left: 60px;*/
-    /*}*/
-
     #blij-met-kunst .page .entry-content {
         width: 60%;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 
     #blij-met-kunst .page .entry-content p {
         margin-left: 0;
     }
-
-    /*#blij-met-kunst .post-375 .entry-content,*/
-    /*#blij-met-kunst .post-571 .entry-content,*/
-    /*#blij-met-kunst .post-471 .entry-content,*/
-    /*#blij-met-kunst .post-447 .entry-content {*/
-    /*    width: 60%;*/
-    /*    margin: 0 auto;*/
-    /*}*/
-
-    /*#blij-met-kunst .post-375 .entry-content p,*/
-    /*#blij-met-kunst .post-571 .entry-content p,*/
-    /*#blij-met-kunst .post-471 .entry-content p,*/
-    /*#blij-met-kunst .post-447 .entry-content p {*/
-    /*    margin-left: 0;*/
-    /*}*/
 
     #blij-met-kunst .entry-content .aanbod-block-image {
         margin: 0 auto;
@@ -750,6 +721,7 @@ body.no-scroll {
     height: 100%;
     position: fixed;
     top: 6em;
+    z-index: 2;
 }
 
 #image-modal .modal-content {
@@ -786,6 +758,13 @@ body.no-scroll {
         height: 100%;
         max-width: none;
     }
+}
+
+/**
+ * Figurines page
+ */
+#blij-met-kunst.page-beeldjes .entry-content {
+    margin: 0 0.5em;
 }
 
 /**
