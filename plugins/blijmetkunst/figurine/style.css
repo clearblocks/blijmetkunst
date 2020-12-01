@@ -19,7 +19,7 @@
     z-index: 1;
 }
 
-.blijmetkunst-figurine .blijmetkunst-figurine-image.image-landscape {
+.blijmetkunst-figurine.image-landscape .blijmetkunst-figurine-image {
     width: 180px;
 }
 
@@ -35,6 +35,10 @@
     bottom: 0;
 }
 
+.blijmetkunst-figurine.image-landscape .blijmetkunst-figurine-color-image {
+    left: 180px;
+}
+
 .blijmetkunst-figurine-info {
     height: 100%;
     margin-left: 1em;
@@ -44,6 +48,7 @@
 .blijmetkunst-figurine-info .blijmetkunst-figurine-title {
     font-weight: bold;
     font-size: 0.8em !important;
+    width: 120px;
 }
 
 .blijmetkunst-figurine-info .blijmetkunst-figurine-size {
@@ -108,17 +113,18 @@
 
     .blijmetkunst-figurine .blijmetkunst-figurine-color-image {
         width: 150px;
-        left: unset;
+        left: 0px !important;
         margin-left: 0;
         bottom: -1em;
     }
 
-    .blijmetkunst-figurine .blijmetkunst-figurine-image.image-landscape {
+    .blijmetkunst-figurine.image-landscape .blijmetkunst-figurine-image {
         width: auto;
     }
 
     .blijmetkunst-figurine-info .blijmetkunst-figurine-title {
         font-size: 1.2em !important;
+        width: 100%;
     }
 
     .blijmetkunst-figurine-info .blijmetkunst-figurine-size {

@@ -24,10 +24,11 @@
 </head>
 
 <body <?php body_class(); ?> id="blij-met-kunst">
+<div class="left-bar side-bar"></div>
+<div class="right-bar side-bar"></div>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
-
+    <header id="masthead" class="split-color <?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
         <div class="site-branding-container">
             <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
         </div><!-- .site-branding-container -->

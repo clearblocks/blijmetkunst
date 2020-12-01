@@ -1,6 +1,6 @@
 </div><!-- #content -->
 
-<footer id="colophon" class="site-footer">
+<footer id="colophon" class="site-footer split-color">
     <div class="site-info">
         <?php if (has_nav_menu('footer')) : ?>
             <nav class="footer-navigation" aria-label="<?php esc_attr_e('Footer Menu', 'twentynineteen'); ?>">

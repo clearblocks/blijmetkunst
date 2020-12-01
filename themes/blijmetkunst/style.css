@@ -22,10 +22,40 @@ oranje: #ffca7f
 paars: #e1c3ff
 licht rood: #ffdddd
 
+
+Nieuwe stijl colors:
+
+donker blauw: #37b6ff (dodgerblue)
+licht blauw: #9ad1ed (skyblue)
+roze: #e597e4 (plum)
+
 */
 
 html, body {
     height: 100%;
+}
+
+@media only screen and (min-device-width: 767px) {
+    body {
+        width: 60%;
+        margin: 0 auto !important;
+    }
+
+    .side-bar {
+        position: fixed;
+        background-color: white;
+        width: 20%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    .left-bar {
+        left: 0;
+    }
+
+    .right-bar {
+        right: 0;
+    }
 }
 
 body.no-scroll {
@@ -40,6 +70,10 @@ body.no-scroll {
 
 .fa, .fas, .far {
     font-family: "Font Awesome 5 Pro" !important;
+}
+
+.fa-home:before {
+    color: white;
 }
 
 @media only screen and (min-device-width: 767px) {
@@ -68,8 +102,9 @@ body.no-scroll {
 }
 
 #blij-met-kunst p a {
-    color: #619b99;
+    color: dodgerblue;
 }
+
 /**
  * Header
  **/
@@ -84,10 +119,36 @@ body.no-scroll {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
-    background: linear-gradient(to top, rgb(183, 223, 248), rgb(217, 239, 241));
-    border-bottom: 1px solid #89a7ba;
+    overflow: hidden;
+    z-index: 3;
+    /*background: linear-gradient(to top, rgb(183, 223, 248), rgb(217, 239, 241));*/
+    /*border-bottom: 1px solid #89a7ba;*/
+    background-color: dodgerblue;
     /* background-color: #c9fffd; */
+}
+
+#blij-met-kunst .split-color::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 800px;
+    left: -41%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, dodgerblue, dodgerblue 50%, skyblue 50%, skyblue);
+    transform: rotate(150deg);
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst .split-color::before {
+        height: 1000px;
+    }
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst header {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
 #blij-met-kunst .site-branding {
@@ -103,9 +164,10 @@ body.no-scroll {
 }
 
 #blij-met-kunst #site-logo {
+    display: none;
     height: 4em;
     top: 1em;
-    left: 0.5em;
+    right: -28em;
 }
 
 #blij-met-kunst h1.site-title {
@@ -142,8 +204,11 @@ body.no-scroll {
     }
 
     #blij-met-kunst #site-logo {
+        display: block;
         height: 5em;
         top: 0.5em;
+        position: absolute;
+        right: 5%;
     }
 
     #blij-met-kunst h1.site-title {
@@ -152,6 +217,7 @@ body.no-scroll {
         top: inherit;
         left: inherit;
         width: auto;
+        margin-top: 1.5em;
     }
 }
 
@@ -177,9 +243,39 @@ body.no-scroll {
     margin: 0.5em 1em;
 }
 
+#blij-met-kunst .corona-update {
+    border: 2px solid dodgerblue;
+    padding: 0.5em;
+    margin: 0 2em;
+    text-align: center;
+    background-color: rgba(30, 144, 255, 0.2);
+    margin-bottom: 2em;
+}
+
+#blij-met-kunst .corona-update p {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+#blij-met-kunst.page-maak-een-afspraak .corona-update,
+#blij-met-kunst.page-maak-een-afspraak .corona-update p {
+    text-align: left !important;
+    margin: 0;
+}
+
+@media only screen and (min-device-width: 767px) {
+    #blij-met-kunst .corona-update {
+        margin: 0;
+        margin-bottom: 2em;
+    }
+}
+
+
+
 /**
- * Menu
- */
+* Menu
+*/
 #blij-met-kunst #responsive-menu-button {
     width: 1em;
     height: 1em;
@@ -200,14 +296,14 @@ body.no-scroll {
 }
 
 #blij-met-kunst #responsive-menu-button .responsive-menu-inner {
-    background-color: #515151;
+    background-color: white;
     width: 1.5em;
 }
 
 #blij-met-kunst #responsive-menu-button .responsive-menu-inner::after,
 #blij-met-kunst #responsive-menu-button .responsive-menu-inner::before {
     width: 1.5em;
-    background-color: #515151;
+    background-color: white;
 }
 
 #blij-met-kunst #responsive-menu-container {
@@ -237,12 +333,14 @@ body.no-scroll {
 
 @media only screen and (min-device-width: 767px) {
     #blij-met-kunst #responsive-menu-container {
-        width: 20%;
+        width: 10%;
         min-width: 200px;
+        left: 20%;
+        z-index: 1;
     }
 
     #blij-met-kunst #responsive-menu-button {
-        left: 0.9em;
+        left: 21%;
     }
 }
 
@@ -292,15 +390,23 @@ body.no-scroll {
     width: 100%;
 }
 
-#blij-met-kunst p.discount-block {
+#blij-met-kunst .discount-block {
     margin: 1em auto !important;
     width: 80%;
-    border: 2px solid #619b99;
-    border-radius: 4px;
-    background-color: rgba(201, 255, 253, 0.6);
+    border: 1px solid dodgerblue;
+    border-radius: 0px;
+    background-color: dodgerblue;
     padding: 5px;
     text-align: center !important;
     font-size: 34px;
+    color: white;
+}
+
+#blij-met-kunst .discount-block span {
+    display: block;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 5px;
 }
 
 @media only screen and (min-device-width: 767px) {
@@ -360,11 +466,11 @@ body.no-scroll {
 }
 
 #blij-met-kunst-main-slider .flex-control-paging a {
-    background: rgba(255,255,255,0.4)
+    background: rgba(255, 255, 255, 0.4)
 }
 
 #blij-met-kunst-main-slider .flex-control-paging a.flex-active {
-    background: rgba(255,255,255,0.8)
+    background: rgba(255, 255, 255, 0.8)
 }
 
 @media only screen and (min-device-width: 767px) {
@@ -442,11 +548,12 @@ body.no-scroll {
 #booking_form1 button,
 #blij-met-kunst .wpcf7-submit {
     display: block;
-    background: linear-gradient(to top, rgb(142, 208, 206), rgb(201, 255, 253));
-    /* background-color: #a4f1ee; */
+    background-color: skyblue;
     color: #515151;
-    border: 2px solid #619b99;
+    border: 1px solid dodgerblue;
+    border-radius: 0px;
 }
+
 
 /**
  * Aanbod/Afspraken pagina/Contact
@@ -484,7 +591,7 @@ body.no-scroll {
     marign: 0;
 }
 
-@media only screen and (min-device-width: 767px)  {
+@media only screen and (min-device-width: 767px) {
 
     #blij-met-kunst .page h2 {
         margin: 1em 0;
@@ -500,7 +607,7 @@ body.no-scroll {
     }
 
     #blij-met-kunst .page .entry-content {
-        width: 60%;
+        /*width: 60%;*/
         margin: 0 auto !important;
     }
 
@@ -579,6 +686,12 @@ body.no-scroll {
     height: 8em;
 }
 
+.datepick-header {
+    z-index: 2;
+    width: 80% !important;
+    margin: 0 auto !important;
+}
+
 @media only screen and (min-device-width: 767px) {
 
     #post-447 .entry-content p {
@@ -618,7 +731,14 @@ body.no-scroll {
 }
 
 #booking_form1 .calendar-links {
-    background: linear-gradient(to top, rgb(142, 208, 206), rgb(201, 255, 253));
+    /*background: linear-gradient(to top, rgb(142, 208, 206), rgb(201, 255, 253));*/
+    background: skyblue;
+    z-index: 2;
+}
+
+#booking_form1 .datepick-days-row span,
+#booking_form1 .datepick-days-row a {
+    z-index: 2;
 }
 
 #booking_form1 a {
@@ -650,13 +770,24 @@ body.no-scroll {
     content: "\f101";
 }
 
+#booking_form1 .date_available {
+    background-color: skyblue;
+}
+
+#booking_form1 .datepick-days-cell-over {
+    background-color: dodgerblue;
+}
+
+
 #booking_form1 .datepick-current-day {
-    background-color: #a4f1ee;
+    background-color: dodgerblue;
 }
 
 #booking_form1 .datepick-current-day a {
     text-shadow: none;
 }
+
+
 
 #booking_form1 .block_hints .block_time,
 #booking_form1 .datepick-inline .timespartly {
@@ -724,6 +855,12 @@ body.no-scroll {
     z-index: 2;
 }
 
+@media only screen and (min-device-width: 767px) {
+    #image-modal {
+        width: 60%;
+    }
+}
+
 #image-modal .modal-content {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -773,12 +910,23 @@ body.no-scroll {
 #blij-met-kunst .site-footer {
     margin-top: 2em;
     padding: 0.5em;
-    background: linear-gradient(to top, rgb(183, 223, 248), rgb(217, 239, 241));
-    border-top: 2px solid #89a7ba;
+    /*background: linear-gradient(to top, rgb(183, 223, 248), rgb(217, 239, 241));*/
+    background-color: dodgerblue;
+    /*border-top: 2px solid #89a7ba;*/
     height: 4em;
     position: absolute;
     bottom: 0;
     width: 100%;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#blij-met-kunst .site-footer.split-color::before {
+    left: -52%;
+}
+
+#blij-met-kunst .site-footer .diagonal-color-block {
+    left: -324px;
 }
 
 #blij-met-kunst .site-footer .site-info {
@@ -798,4 +946,23 @@ body.no-scroll {
     display: block;
     flex: 0 1 auto; /* Default */
     list-style-type: none;
+    z-index: 3;
 }
+
+/** Override 2019 styles */
+
+@media only screen and (min-device-width: 767px) {
+    .entry .entry-content > *, .entry .entry-summary > * {
+        max-width: 100% !important;
+    }
+}
+
+/**
+ Reserved dates
+ */
+
+/**
+#booking_form1 .cal4date-1-16-2021 {
+    background-color: white;
+}
+*/
